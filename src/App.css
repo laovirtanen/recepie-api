@@ -1,38 +1,115 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #1a1a1d;
+  color: #e6e6e6;
+  overflow-x: hidden;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow-y: auto;
+  min-height: 100vh;
+
+  width: 100vw;
+  background-image: linear-gradient(120deg, #1a1a1d, #2b2b2f);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2) inset;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+input {
+  padding: 10px 15px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 300px;
+  background-color: #333;
+  color: #e6e6e6;
+  transition: transform 0.2s;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input:focus {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button {
+  background-color: #4a4a4f;
+  color: #e6e6e6;
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+
+  /* Add a subtle shadow for depth */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button:hover {
+  background-color: #63636b;
+  transform: scale(1.05);
+}
+
+.button:active {
+  background-color: #333338;
+  transform: scale(0.95);
+}
+
+.recepie-container {
+  background-color: #3a3a3f;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: background-color 0.3s;
+  flex: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.recepie-container:hover {
+  background-color: #46464c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.recepie-container h3 {
+  color: #e6e6e6;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.recepie-container img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.recepie-container p {
+  color: #b0b0b0;
+  margin-bottom: 0;
 }
